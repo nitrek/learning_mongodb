@@ -1,0 +1,1 @@
+mongoimport --type csv --headerline --db mflix --collection movies_initial --host "host" --authenticationDatabase admin --ssl --username username --password password --file movies_initial.csv
