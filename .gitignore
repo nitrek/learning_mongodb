@@ -1,3 +1,4 @@
 mongodb-analytics/intro-to-mongodb/notebooks/.env
 mongodb-analytics/intro-to-mongodb/notebooks/.ipynb_checkpoints/*
 mongodb-analytics/intro-to-mongodb/notebooks/__pycache__/*
+mongodb-analytics/intro-to-mongodb/mflix2/env.bat
