@@ -5,10 +5,10 @@ from bson.errors import InvalidId
 from sys import maxsize
 from datetime import datetime
 from os import environ
-
+import connect as c
 
 try: 
-    db = MongoClient(environ["MFLIX_DB_URI"])["mflix"]
+    db = c.getMongoClient()["mflix"]
 except KeyError:
     raise Exception("You haven't configured your MFLIX_DB_URI!")
 
