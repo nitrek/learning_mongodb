@@ -5,10 +5,16 @@ from bson.errors import InvalidId
 from sys import maxsize
 from datetime import datetime
 from os import environ
-import connect as c
-
+from pymongo import MongoClient
+from dotenv import dotenv_values
+def getMongoClient():
+    config = dotenv_values(".env")
+    # Replace XXXX with your connection URI from the Atlas UI
+    client = MongoClient(config['connection_url'])
+    print(f"Connected to MongoDB Atlas with URI: {config['connection_url']}")
+    return client
 try: 
-    db = c.getMongoClient()["mflix"]
+    db = getMongoClient()["mflix"]
 except KeyError:
     raise Exception("You haven't configured your MFLIX_DB_URI!")
 
